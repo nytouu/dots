@@ -1,0 +1,16 @@
+#!/bin/sh
+
+text="$(tail -n1 < /tmp/mpcscroll | sed 's/^/ /')"
+
+if [ "$text" = " " ]; then
+  true
+else
+  echo "$text"
+fi
+
+case $BLOCK_BUTTON in
+	1) mpc toggle ;;  # right click, pause/unpause
+	3) setsid -f "$TERMINAL" -e ncmpcpp ;;  # right click, pause/unpause
+	4) mpc volume +1;;
+	5) mpc volume -1 ;;
+esac

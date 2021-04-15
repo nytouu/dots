@@ -1,0 +1,22 @@
+!! Set a default font and font size as below:
+*.font: Terminus
+
+!! Dracula Xresources palette
+*.foreground: #f5e6f5
+*.background: #181621
+*.color0:     #110f19
+*.color8:     #4b4652
+*.color1:     #e11537
+*.color9:     #d77392
+*.color2:     #95ff3b
+*.color10:    #94e77e
+*.color3:     #ffe100
+*.color11:    #ffe771
+*.color4:     #c173ff
+*.color12:    #bf94e1
+*.color5:     #f4348b
+*.color13:    #ef8dcf 
+*.color6:     #23f5e6
+*.color14:    #7fe8de
+*.color7:     #6a6483
+*.color15:    #d7d5f4

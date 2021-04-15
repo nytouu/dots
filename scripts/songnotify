@@ -1,0 +1,6 @@
+#!/bin/sh
+
+notify-send --app-name="Now Playing" \
+    --icon="/home/nytou/music/$(mpc --format '%artist%' current) - $(mpc --format '%album%' current)/cover.png" "$(mpc --format '%album% \n%title% - %artist%' current)" &&
+
+pkill -RTMIN+11 hydrablocks

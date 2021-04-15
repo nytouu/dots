@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ zscroll -l 30 --before-text "" --delay 1 \
+                --match-command "mpc status" \
+                --match-text "playing" "--before-text ''" \
+                --match-text "paused" "--before-text '' --scroll 0" \
+                --update-check true "mpc current" > /tmp/mpcscroll
+

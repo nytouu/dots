@@ -1,0 +1,30 @@
+#!/bin/sh
+
+monitorlist="$(xrandr | grep " connected" | awk '{ print $1 }')"
+
+# if [ "$( "$monitorlist" | wc -l )" -eq 1 ]; then
+    # echo "one screen detected" && exit 1
+# fi
+
+mainscreen="$( "$monitorlist" | head -n1 )"
+secondscreen="$( "$monitorlist" | tail -n1 )"
+
+# single(){
+#     xrandr --output "$mainscreen"--mode 1920x1080 --primary
+#     xrandr --output "$secondscreen" --off
+# }
+
+# extendright() {
+#     xrandr --output "$secondscreen" --mode 1920x1080 --right-of "$mainscreen"
+# }
+
+# mirror(){
+#     xrandr --output "$mainscreen" --mode 1920x1080 --panning 1920x1080 --output "$secondscreen" --mode 1920x1080 --same-as "$mainscreen"
+# }
+
+case $1 in
+    --single) single ;;
+    --extend-right) extendright ;;
+    --mirror) mirror ;;
+    *) echo "error : --single --extend-right --mirror" && exit 1 ;;
+esac

@@ -1,0 +1,35 @@
+set realname = "José-Daniel Capitaine"
+set from = "capitaine7312@gmail.com"
+
+###############
+# Example: local mailboxes
+#
+# Some people use mbsync or getmail to retrieve their mail locally.
+#
+# set folder = ~/.local/share/Mail           # This has the shortcut '+' or '='
+# set spoolfile = "+inbox"      # This has the shortcut '!'
+# set record = "+sent"
+# set trash = "+trash"
+# set postponed = "+drafts"
+
+# mailboxes ! +neomutt +family +work
+
+set imap_user = "capitaine7312@gmail.com"
+set imap_pass = "`gpg --batch -q --decrypt ~/.config/mutt/account.gpg`"
+
+set folder = "imaps://imap.gmail.com"
+set spoolfile = "+INBOX"
+unset record                # Gmail auto-stores in "+[Gmail].Sent Mail"
+unset trash                 # Unset, deletion will remove labels
+
+set mail_check = 60
+
+alternative_order multipart/mixed multipart/related text/plain
+
+set edit_headers
+
+set editor = "nvim"
+
+set sendmail = "/usr/bin/msmtp"
+
+# set query_command = "/usr/bin/lbdbq"

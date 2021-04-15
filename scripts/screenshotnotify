@@ -1,0 +1,7 @@
+#!/bin/sh
+
+folder="$HOME/pics/screenshots"
+filename="$(ls $folder -t | head -n 1)"
+fileloc="$folder/$filename"
+
+notify-send --app-name="Screenshot saved" "$filename" --icon="$fileloc"

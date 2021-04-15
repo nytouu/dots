@@ -1,0 +1,7 @@
+#*****************************************#
+#*-------------config for ytmdl-----------#
+#------PLEASE DON'T LEAVE ANY BLANK LINES-#
+#*****************************************#
+SONG_DIR = "/home/nytou/music/others"
+QUALITY = "320"
+DEFAULT_FORMAT = "mp3"

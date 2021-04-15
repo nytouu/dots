@@ -1,0 +1,3 @@
+#!/bin/sh
+
+WINEESYNC=1 protontricks -c 'wine /home/nytou/docs/BakkesMod.exe' 252950

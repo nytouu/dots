@@ -1,0 +1,8 @@
+#!/bin/sh
+
+device=$(xsetwacom --list devices | grep -i STYLUS | awk '{print $8}')
+
+xsetwacom --set "$device" MapToOutput 1980x1080+0+0
+xsetwacom --set "$device" Area 0 0 8000 4500
+
+echo 'area set'
