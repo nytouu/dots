@@ -11,21 +11,20 @@ local colors = {
     fg = '#f5d6f5',
     blue = '#7fe8de',
     green = '#94e77e',
-    purple1 = '#ccaaff',
-    purple2 = '#c173ff',
+    purple = '#ccaaff',
     orange = '#ffe100',
     red1 = '#d77392',
     red2 = '#e11537',
-    yellow = '#ffe771',
+    yellow = '#ffe771'
 }
 
 local mode_map = {
-    ['n'] = {'NORMAL', colors.purple1},
-    ['i'] = {'INSERT', colors.purple2},
+    ['n'] = {'NORMAL', colors.purple},
+    ['i'] = {'INSERT', colors.blue},
     ['R'] = {'REPLACE', colors.red1},
     ['v'] = {'VISUAL', colors.yellow},
     ['V'] = {'V-LINE', colors.yellow},
-    ['c'] = {'COMMAND', colors.red1},
+    ['c'] = {'COMMAND', colors.green},
     ['s'] = {'SELECT', colors.orange},
     ['S'] = {'S-LINE', colors.orange},
     ['t'] = {'TERMINAL', colors.blue},
@@ -135,7 +134,7 @@ gls.right[1] =
             if connected then
                 return ''
             else
-                return 'no lsp'
+                return ''
             end
         end,
         highlight = {colors.fg, colors.bg},
