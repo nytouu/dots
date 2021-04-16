@@ -16,7 +16,7 @@ vim.wo.cursorline = true -- Enable highlighting of the current line
 vim.o.title = true
 TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="TERMINAL"')
-vim.o.titlestring="%<%F%=- nvim"
+vim.o.titlestring="nvim - %<%F%="
 vim.wo.number = true -- set numbered lines
 vim.wo.relativenumber = false -- set relative number
 vim.o.hidden = true -- Required to keep multiple buffers open multiple buffers
@@ -38,7 +38,7 @@ vim.o.splitright = true -- Vertical splits will automatically be to the right
 vim.cmd('syntax on')
 vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
-vim.cmd('set inccommand=split') -- Make substitution work in realtime
-vim.o.backup = false -- This is recommended by coc
-vim.o.writebackup = false -- This is recommended by coc
-vim.o.guifont = "TerminessTTF Nerd Font:h17"
+-- vim.cmd('set inccommand=split') -- Make substitution work in realtime
+-- vim.o.backup = false -- This is recommended by coc
+-- vim.o.writebackup = false -- This is recommended by coc
+vim.o.guifont = "TerminessTTF Nerd Font Mono:h20:style=Medium"
