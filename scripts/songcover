@@ -1,0 +1,9 @@
+#!/bin/sh
+
+coverpath="$HOME/music/$(mpc --format '%artist%' current) - $(mpc --format '%album%' current)/cover.png"
+
+if [ -f "$coverpath" ]; then
+    echo $coverpath;
+else 
+    echo $HOME/docs/fallback.png; 
+fi
