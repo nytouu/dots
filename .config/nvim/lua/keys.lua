@@ -27,6 +27,19 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>sh', ':split<CR>',  {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>sv', ':vsplit<CR>', {noremap = true, silent = true})
 
+-- Terminal window navigation
+vim.cmd([[
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-l> <C-\><C-N><C-w>l
+  inoremap <C-h> <C-\><C-N><C-w>h
+  inoremap <C-j> <C-\><C-N><C-w>j
+  inoremap <C-k> <C-\><C-N><C-w>k
+  inoremap <C-l> <C-\><C-N><C-w>l
+  tnoremap <Esc> <C-\><C-n>
+]])
+
 -- resize with arrows
 vim.cmd([[
     nnoremap <silent> <C-Up>    :resize -1<CR>
@@ -38,10 +51,14 @@ vim.cmd([[
 -- better indenting
 vim.api.nvim_set_keymap('n', '<M-h>', '<<', {silent = true})
 vim.api.nvim_set_keymap('n', '<M-l>', '>>', {silent = true})
+vim.api.nvim_set_keymap('v', '<', '<gv', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 
 -- move lines up or down
-vim.api.nvim_set_keymap('n', '<M-k>', ':move-2<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<M-k>', ':move-2<CR>', {silent = true}) -- move a single line in normal
 vim.api.nvim_set_keymap('n', '<M-j>', ':move+<CR>',  {silent = true})
+vim.api.nvim_set_keymap('x', '<M-k>', ':move \'<-2<CR>gv-gv', {noremap = true, silent = true}) -- move multiple lines in visual
+vim.api.nvim_set_keymap('x', '<M-j>', ':move \'>+1<CR>gv-gv', {noremap = true, silent = true})
 
 -- Better nav for omnicomplete
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
@@ -61,3 +78,8 @@ vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll
 -- scroll up hover doc
 vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
 vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
+-- vim.api.nvim_set_keymap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
