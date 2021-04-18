@@ -48,9 +48,9 @@ return require('packer').startup(function()
 
     -- Quality of life stuff
     use 'tpope/vim-commentary'
-    -- use 'windwp/nvim-autopairs'
-    use 'cohama/lexima.vim'
-    use 'tpope/vim-surround'
+    use 'windwp/nvim-autopairs'
+    -- use 'cohama/lexima.vim'
+    -- use 'tpope/vim-surround'
     use 'psliwka/vim-smoothie'
     -- use 'Yggdroot/indentLine'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }

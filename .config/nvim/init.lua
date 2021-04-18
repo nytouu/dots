@@ -10,6 +10,7 @@ require('nvtree')
 require('dashboard')
 require('indent')
 require('tel')
+require('pairs')
 
 require('lsp-compe')
 require('lsp-kind')
