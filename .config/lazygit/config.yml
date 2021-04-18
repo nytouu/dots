@@ -8,26 +8,19 @@ gui:
 keybinding:
   universal:
     quit: 'q'
-    quit-alt1: '<c-c>' # alternative/alias of quit
     return: '<esc>' # return to previous menu, will quit if there's nowhere to return
-    quitWithoutChangingDirectory: 'Q'
     togglePanel: '<tab>' # goto the next panel
-    prevItem: '<up>' # go one line up
-    nextItem: '<down>' # go one line down
-    prevItem-alt: 'k' # go one line up
-    nextItem-alt: 'j' # go one line down
-    prevPage: ',' # go to next page in list
-    nextPage: '.' # go to previous page in list
-    gotoTop: '<' # go to top of list
-    gotoBottom: '>' # go to bottom of list
-    prevBlock: '<left>' # goto the previous block / panel
-    nextBlock: '<right>' # goto the next block / panel
-    prevBlock-alt: 'h' # goto the previous block / panel
-    nextBlock-alt: 'l' # goto the next block / panel
+    prevItem: 'k' # go one line up
+    nextItem: 'j' # go one line down
+    prevPage: '<c-b>' # go to next page in list
+    nextPage: '<c-f>' # go to previous page in list
+    gotoTop: 'g' # go to top of list
+    gotoBottom: 'G' # go to bottom of list
+    prevBlock: 'h' # goto the previous block / panel
+    nextBlock: 'l' # goto the next block / panel
     nextMatch: 'n'
     prevMatch: 'N'
-    optionMenu: 'x' # show help menu
-    optionMenu-alt1: '?' # show help menu
+    optionMenu: '?' # show help menu
     select: '<space>'
     goInto: '<enter>'
     confirm: '<enter>'
@@ -36,10 +29,8 @@ keybinding:
     new: 'n'
     edit: 'e'
     openFile: 'o'
-    scrollUpMain: '<pgup>' # main panel scrool up
-    scrollDownMain: '<pgdown>' # main panel scrool down
-    scrollUpMain-alt1: 'K' # main panel scrool up
-    scrollDownMain-alt1: 'J' # main panel scrool down
+    scrollUpMain: 'K' # main panel scrool up
+    scrollDownMain: 'J' # main panel scrool down
     scrollUpMain-alt2: '<c-u>' # main panel scrool up
     scrollDownMain-alt2: '<c-d>' # main panel scrool down
     executeCustomCommand: ':'
@@ -47,22 +38,18 @@ keybinding:
     pushFiles: 'P'
     pullFiles: 'p'
     refresh: 'R'
-    createPatchOptionsMenu: '<c-p>'
-    nextTab: ']'
-    prevTab: '['
+    createPatchOptionsMenu: '<c-o>'
+    nextTab: '<c-n>'
+    prevTab: '<c-p>'
     nextScreenMode: '+'
     prevScreenMode: '_'
     undo: 'z'
     redo: '<c-z>'
     filteringMenu: '<c-s>'
     diffingMenu: 'W'
-    diffingMenu-alt: '<c-e>' # deprecated
-    copyToClipboard: '<c-o>'
+    copyToClipboard: 'Y'
     submitEditorText: '<enter>'
     appendNewline: '<tab>'
-  status:
-    checkForUpdate: 'u'
-    recentRepos: '<enter>'
   files:
     commitChanges: 'c'
     commitChangesWithoutHook: 'w' # commit changes without pre-commit hook
