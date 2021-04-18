@@ -39,6 +39,7 @@ vids/
 .xsession-errors.old
 .zcompdump
 .config/Badlion Client
+.config/Kvantum
 .config/cef_user_data/
 .config/dconf/
 .config/discord/
@@ -52,6 +53,8 @@ vids/
 .config/lxsession
 .config/menus
 .config/mpv
+.config/gtk-2.0/
+.config/gtk-3.0/
 .config/MuseScore/
 .config/obs-studio/
 .config/oldnvim/plugged/
@@ -64,6 +67,7 @@ vids/
 .config/REAPER/
 .config/VirtualBox/
 .config/qutebrowser/
+.config/zathura
 .config/mimeapps.list
 .config/QtProject.conf
 .local/bin/
