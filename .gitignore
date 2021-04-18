@@ -140,3 +140,6 @@ vids/
 .local/share/applications/wine-extension-xbap.desktop
 
 .config/nvim/plugin/packer_compiled.vim
+scripts/polybar.sh
+.config/river/init
+.config/polybar/config
