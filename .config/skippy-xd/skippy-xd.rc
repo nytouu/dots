@@ -10,7 +10,7 @@ movePointerOnRaise = false
 switchDesktopOnActivate = false
 
 [xinerama]
-showAll = false
+showAll = true
 
 [normal]
 tint = black
