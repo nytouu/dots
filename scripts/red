@@ -1,0 +1,5 @@
+#!/bin/sh
+
+### ROOT EDIT
+
+doas vim $1
