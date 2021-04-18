@@ -17,8 +17,9 @@ vim.g.dashboard_custom_section = {
     a = {description = {'  Find File          '}, command = 'Telescope find_files'},
     b = {description = {'  New File           '}, command = ':DashboardNewFile'},
     c = {description = {'  Recent Files       '}, command = 'Telescope oldfiles'},
-    d = {description = {'  Settings           '}, command = ':e $HOME/.config/nvim/lua/settings.lua'},
-    e = {description = {'  Quit               '}, command = ':q'}
+    d = {description = {'  Live Grep          '}, command = 'Telescope live_grep'},
+    e = {description = {'  Settings           '}, command = ':e $HOME/.config/nvim/lua/settings.lua'},
+    f = {description = {'  Quit               '}, command = ':q'}
 }
 
 -- vim.g.dashboard_custom_shortcut = {
