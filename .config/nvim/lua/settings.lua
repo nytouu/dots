@@ -15,7 +15,7 @@ vim.o.mouse = "a" -- Enable your mouse
 vim.wo.cursorline = true -- Enable highlighting of the current line
 vim.o.title = true
 TERMINAL = vim.fn.expand('$TERMINAL')
-vim.cmd('let &titleold="TERMINAL"')
+vim.cmd('let &titleold="'..TERMINAL..'"')
 vim.o.titlestring="nvim - %<%F%="
 vim.wo.number = true -- set numbered lines
 vim.wo.relativenumber = false -- set relative number
