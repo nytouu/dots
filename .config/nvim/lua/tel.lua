@@ -1,9 +1,8 @@
 local actions = require('telescope.actions')
--- require('telescope').load_extension('media_files')
 require('telescope').setup {
     defaults = {
         find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-        prompt_position = "top",
+        prompt_position = "bottom",
         prompt_prefix = " ",
         selection_caret = " ",
         entry_prefix = "  ",
@@ -26,27 +25,19 @@ require('telescope').setup {
         color_devicons = true,
         use_less = true,
         set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
-
         buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
+
         mappings = {
             i = {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<esc>"] = actions.close
-
             },
+
             n = {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous
             }
         }
     },
-    -- extensions = {
-    --     media_files = {
-    --         -- filetypes whitelist
-    --         -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-    --         filetypes = {"png", "webp", "jpg", "jpeg"},
-    --         find_cmd = "rg" -- find command (defaults to `fd`)
-    --     }
-    -- }
 }
