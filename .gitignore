@@ -53,8 +53,6 @@ vids/
 .config/lxsession
 .config/menus
 .config/mpv
-.config/gtk-2.0/
-.config/gtk-3.0/
 .config/MuseScore/
 .config/obs-studio/
 .config/oldnvim/plugged/
@@ -67,7 +65,6 @@ vids/
 .config/REAPER/
 .config/VirtualBox/
 .config/qutebrowser/
-.config/zathura
 .config/mimeapps.list
 .config/QtProject.conf
 .local/bin/
@@ -147,3 +144,10 @@ vids/
 scripts/polybar.sh
 .config/river/init
 .config/polybar/config
+
+.config/godot/
+.local/share/godot/
+.local/share/rtv/
+.config/gtk-2.0/
+.config/gtk-3.0/
+.config/zathura
