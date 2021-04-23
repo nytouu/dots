@@ -12,6 +12,11 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true
 -- open dashboard
 vim.api.nvim_set_keymap('n', '<Leader>d', ':Dashboard<CR>', {silent = true})
 
+-- telescope stuff
+vim.api.nvim_set_keymap('n', 'ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'fg', ':Telescope live_grep<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'fo', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
+
 -- buffer movement
 vim.api.nvim_set_keymap('n', '<S-j>', ':BufferNext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-k>', ':BufferPrevious<CR>', {noremap = true, silent = true})
