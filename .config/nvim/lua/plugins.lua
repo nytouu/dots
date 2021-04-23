@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -12,12 +13,17 @@ return require('packer').startup(function()
     -- Packer can manage itself as an optionnal plugin
     use 'wbthomason/packer.nvim'
 
+    -- Lua stuff
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-lua/popup.nvim'
+
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind-nvim'
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
+	use 'kosayoda/nvim-lightbulb'
 
     -- Colors
     use 'norcalli/nvim-colorizer.lua'
@@ -35,24 +41,19 @@ return require('packer').startup(function()
     -- Telescope
     use 'nvim-telescope/telescope.nvim'
 
-    -- Lua stuff
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-lua/popup.nvim'
-
     -- Icons
-    use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
 
     -- File explorer
     use 'kyazdani42/nvim-tree.lua'
 
     -- Quality of life stuff
-    use 'tpope/vim-commentary'
+    use 'glepnir/prodoc.nvim'
     use 'windwp/nvim-autopairs'
-    -- use 'cohama/lexima.vim'
-    -- use 'tpope/vim-surround'
-    use 'psliwka/vim-smoothie'
-    -- use 'Yggdroot/indentLine'
+    use 'tpope/vim-surround'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
     use 'vimlab/split-term.vim'
+	use 'karb94/neoscroll.nvim'
+-- 	use 'mfussenegger/nvim-dap'
+-- 	use 'rcarriga/nvim-dap-ui'
 end)

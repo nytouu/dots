@@ -12,6 +12,8 @@ require('dashboard')
 require('indent')
 require('tel')
 require('pairs')
+require('lightbulb')
+require('scroll')
 
 require('lsp-compe')
 require('lsp-kind')
