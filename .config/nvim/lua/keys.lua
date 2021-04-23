@@ -12,6 +12,10 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true
 -- open dashboard
 vim.api.nvim_set_keymap('n', '<Leader>d', ':Dashboard<CR>', {silent = true})
 
+-- fold open/close
+vim.api.nvim_set_keymap('n', '<Leader>o', ':foldopen<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>c', ':foldopen<CR>', {silent = true})
+
 -- telescope stuff
 vim.api.nvim_set_keymap('n', 'ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'fg', ':Telescope live_grep<CR>', {noremap = true, silent = true})
@@ -25,6 +29,7 @@ vim.api.nvim_set_keymap('n', '<A-c>', ':BufferClose<CR>', {noremap = true, silen
 -- prodoc/commenting
 vim.api.nvim_set_keymap('n', 'gcc', ':ProComment<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('x', 'gcc', ':ProComment<CR>', {noremap = true, silent = true})
+
 -- better window movement
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
