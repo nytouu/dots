@@ -1,3 +1,5 @@
+DATA_PATH = vim.fn.stdpath('data')
+
 vim.lsp.protocol.CompletionItemKind = {
     "   (Text) ",
     "   (Method)",

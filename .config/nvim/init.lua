@@ -1,5 +1,4 @@
 require('plugins')
-require('utils')
 
 require('settings')
 require('keys')
