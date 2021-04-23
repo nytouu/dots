@@ -18,30 +18,14 @@ require'compe'.setup {
         calc = {kind = "  "},
         -- vsnip = {kind = "  "},
         nvim_lsp = {kind = "  "},
-        -- nvim_lua = {kind = "  "},
-		nvim_lua = false,
+        nvim_lua = {kind = "  "},
+		-- nvim_lua = false,
         spell = {kind = "  "},
         tags = false,
-        vim_dadbod_completion = true,
-        -- snippets_nvim = {kind = "  "},
-        -- ultisnips = {kind = "  "},
-        -- treesitter = {kind = "  "},
+        treesitter = {kind = "  "},
         -- emoji = {kind = " ﲃ ", filetypes={"markdown", "text"}}
         -- for emoji press : (idk if that in compe tho)
     }
-    -- source = {
-    --     path = true;
-    --     buffer = true;
-    --     calc = false;
-    --     omni = true;
-    --     vsnip = false;
-    --     nvim_lsp = true;
-    --     nvim_lua = false;
-    --     spell = true;
-    --     tags = false;
-    --     snippets_nvim = false;
-    --     treesitter = true;
-    -- };
 }
 
 local t = function(str)
@@ -57,9 +41,7 @@ local check_back_space = function()
     end
 end
 
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
+-- idk bro im just copy pasting what's on the wiki at this point
 _G.tab_complete = function()
     if vim.fn.pumvisible() == 1 then
         return t "<C-n>"

@@ -34,3 +34,9 @@ vim.g.nvim_tree_icons = {
     symlink = '',
     folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
 }
+
+vim.g.nvim_tree_show_icons = {
+    git = 0,
+    folders = 1,
+    files = 1,
+	}

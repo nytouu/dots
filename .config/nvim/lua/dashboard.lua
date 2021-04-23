@@ -29,6 +29,7 @@ vim.g.dashboard_custom_section = {
     f = {description = {'  Quit               '}, command = ':q'}
 }
 
+-- TODO figure out how this shit works
 vim.g.dashboard_custom_shortcut = {
     a = 'SPC c n',
     b = 'SPC f a',

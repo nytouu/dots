@@ -4,7 +4,7 @@ require('telescope').setup {
         find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
         prompt_position = "bottom",
         prompt_prefix = " ",
-        selection_caret = " ",
+        selection_caret = ">  ",
         entry_prefix = "  ",
         initial_mode = "insert",
         selection_strategy = "reset",
@@ -22,11 +22,15 @@ require('telescope').setup {
         results_width = 0.8,
         border = {},
         borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
+-- 		borderchars = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
         color_devicons = true,
         use_less = true,
-        set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
-        buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
+        set_env = {['COLORTERM'] = 'truecolor'},
+		file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+		grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+		qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
 
+        buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
         mappings = {
             i = {
                 ["<C-j>"] = actions.move_selection_next,
@@ -39,5 +43,5 @@ require('telescope').setup {
                 ["<C-k>"] = actions.move_selection_previous
             }
         }
-    },
+    }
 }
