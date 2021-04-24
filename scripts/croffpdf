@@ -1,0 +1,10 @@
+#!/bin/sh
+
+### i'm using groff ms macro
+
+if [ -f "$1" ]; then
+    output="$(basename "$1" | sed 's/.ms/.pdf/')"
+    groff -ms "$1" -T pdf > "$output"
+else
+    echo "$1 is not a file" && exit 1;
+fi
