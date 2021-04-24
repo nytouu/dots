@@ -13,8 +13,9 @@ require'compe'.setup {
     documentation = true;
 
     source = {
-        path = {kind = "  "},
-        buffer = {kind = "  "},
+		path = {kind = "  "},
+--         buffer = {kind = "  "},
+		buffer = false,
         calc = {kind = "  "},
         -- vsnip = {kind = "  "},
         nvim_lsp = {kind = "  "},
