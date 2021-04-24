@@ -28,8 +28,9 @@ return require('packer').startup(function()
     -- Colors
     use 'norcalli/nvim-colorizer.lua'
 
-    -- Treesitter
+    -- Syntax stuff
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use 'sheerun/vim-polyglot'
 
     -- Theming
     use {'dracula/vim', as = 'dracula'}
