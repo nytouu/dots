@@ -56,6 +56,4 @@ return require('packer').startup(function()
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
     use 'vimlab/split-term.vim'
 	use 'karb94/neoscroll.nvim'
--- 	use 'mfussenegger/nvim-dap'
--- 	use 'rcarriga/nvim-dap-ui'
 end)

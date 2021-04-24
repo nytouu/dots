@@ -15,7 +15,6 @@ require('tel')
 require('pairs')
 require('lightbulb')
 require('scroll')
-require('git')
 
 require('lsp-compe')
 require('lsp-kind')
