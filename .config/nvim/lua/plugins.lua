@@ -50,7 +50,7 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-tree.lua'
 
     -- Quality of life stuff
-    use 'glepnir/prodoc.nvim'
+    use 'tpope/vim-commentary'
     use 'windwp/nvim-autopairs'
     use 'tpope/vim-surround'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
