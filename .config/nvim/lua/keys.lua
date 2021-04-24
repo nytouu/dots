@@ -22,13 +22,14 @@ vim.api.nvim_set_keymap('n', 'fg', ':Telescope live_grep<CR>', {noremap = true, 
 vim.api.nvim_set_keymap('n', 'fo', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 
 -- buffer movement
-vim.api.nvim_set_keymap('n', '<S-j>', ':BufferNext<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-k>', ':BufferPrevious<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<A-c>', ':BufferClose<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-j>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-k>', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<A-c>', ':bdelete<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 
 -- prodoc/commenting
-vim.api.nvim_set_keymap('n', 'gcc', ':ProComment<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('x', 'gcc', ':ProComment<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', 'gcc', ':ProComment<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('x', 'gcc', ':ProComment<CR>', {noremap = true, silent = true})
 
 -- better window movement
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
