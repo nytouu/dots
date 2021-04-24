@@ -151,3 +151,8 @@ scripts/polybar.sh
 .config/gtk-2.0/
 .config/gtk-3.0/
 .config/zathura
+
+.ssh/id_ed25519
+.ssh/id_ed25519.pub
+.ssh/known_hosts
+.profile
