@@ -1,6 +1,3 @@
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
-vim.fn.sign_define( 'LightBulbSign', { text = "", texthl = "TSAnnotation", linehl="", numhl="" })
-
 require'nvim-lightbulb'.update_lightbulb {
     sign = {
         enabled = true,

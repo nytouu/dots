@@ -3,9 +3,6 @@ vim.cmd('colorscheme dracula')
 vim.o.encoding = "utf-8"
 vim.o.fileencoding = "utf-8"
 
-vim.cmd('autocmd VimEnter * hi Normal ctermfg=white ctermbg=NONE guifg=white guibg=NONE')
-vim.cmd('let g:vim_current_word#highlight_current_word = 0')
-
 vim.o.clipboard = "unnamedplus"
 vim.o.completeopt = "menuone,noselect"
 vim.cmd('set colorcolumn=99999')
