@@ -1,0 +1,63 @@
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+window {
+  background-color: #181621;
+  color: #f5d6f5;
+  font-family: Terminus;
+}
+
+button {
+  all: unset;
+  background-color: #181621;
+  padding: 10px;
+}
+
+// Styles on classes (see eww.xml for more information)
+
+.sidestuff slider {
+  all: unset;
+  color: #f5d6f5;
+}
+
+.slider-vol scale trough highlight {
+  all: unset;
+  background-color: #d77392;
+  color: #000000;
+  border-radius: 10px;
+}
+.slider-vol scale trough {
+  all: unset;
+  background-color: #6a6483;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.slider-ram scale trough highlight {
+  all: unset;
+  background-color: #d77392;
+  color: #000000;
+  border-radius: 10px;
+}
+.slider-ram scale trough {
+  all: unset;
+  background-color: #6a6483;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.label-ram {
+  font-size: large;
+}
+.time {
+  padding-right: 10px;
+}
+.workspaces button:hover {
+  color: #d77392;
+}
