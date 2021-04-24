@@ -1,10 +1,12 @@
 require('plugins')
 
+require('autocmd')
 require('settings')
 require('keys')
+
 require('colors')
 require('statusline')
-require('bufferline')
+require('buffer')
 require('nvtree')
 require('tree')
 require('dashboard')
@@ -13,6 +15,7 @@ require('tel')
 require('pairs')
 require('lightbulb')
 require('scroll')
+require('git')
 
 require('lsp-compe')
 require('lsp-kind')
