@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xmenu < $HOME/scripts/listapp.txt | sh &
