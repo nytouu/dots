@@ -1,22 +1,24 @@
-!! Set a default font and font size as below:
-*.font: Terminus
+*.font: FiraMono Nerd Font
+Xft.dpi: 96
+XTerm*renderFont: true
+XTerm*faceName: xft:Fira Mono, xft:FiraMono Nerd Font
+XTerm*faceSize: 12
 
-!! Dracula Xresources palette
-*.foreground: #f5e6f5
-*.background: #181621
-*.color0:     #110f19
-*.color8:     #4b4652
-*.color1:     #e11537
-*.color9:     #d77392
-*.color2:     #95ff3b
-*.color10:    #94e77e
-*.color3:     #ffe100
-*.color11:    #ffe771
-*.color4:     #c173ff
-*.color12:    #bf94e1
-*.color5:     #f4348b
-*.color13:    #ef8dcf 
-*.color6:     #23f5e6
-*.color14:    #7fe8de
-*.color7:     #6a6483
-*.color15:    #d7d5f4
+*.foreground: #c0caf5
+*.background: #24283b
+*.color0:     #414868
+*.color8:     #414868
+*.color1:     #f7768e
+*.color9:     #f7768e
+*.color2:     #9ece6a
+*.color10:    #9ece6a
+*.color3:     #e0af68
+*.color11:    #e0af68
+*.color4:     #7aa2f7
+*.color12:    #7aa2f7
+*.color5:     #bb9af2
+*.color13:    #bb9af2 
+*.color6:     #7dcfff
+*.color14:    #7dcfff
+*.color7:     #a9b1d6
+*.color15:    #c0caf5
