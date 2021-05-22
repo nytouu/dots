@@ -7,7 +7,7 @@ here's a screenshot :\
 
 # software i use
 
-os : [arch linux]()
+os : [arch linux](https://archlinux.org/)
 
 window manager : [hydra](https://github.com/nytouu/hydra)\
 statusbar : [hydrablocks](https://github.com/nytouu/hydrablocks)
