@@ -156,3 +156,4 @@ scripts/polybar.sh
 .ssh/id_ed25519.pub
 .ssh/known_hosts
 .profile
+config/nvim/plugin/packer_compiled.vim
