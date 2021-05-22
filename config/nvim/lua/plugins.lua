@@ -9,6 +9,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute 'packadd packer.nvim'
 end
 
+vim.cmd "autocmd BufWritePost plugins.lua PackerCompile"
+
 return require('packer').startup(function()
     -- Packer can manage itself as an optionnal plugin
     use 'wbthomason/packer.nvim'
@@ -20,22 +22,25 @@ return require('packer').startup(function()
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'glepnir/lspsaga.nvim'
-    use 'onsails/lspkind-nvim'
+    -- use 'onsails/lspkind-nvim'
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
-	use 'kosayoda/nvim-lightbulb'
+	-- use 'kosayoda/nvim-lightbulb'
+    use 'folke/lsp-trouble.nvim'
+    use 'ray-x/lsp_signature.nvim'
 
     -- Colors
     use 'norcalli/nvim-colorizer.lua'
+    use 'folke/lsp-colors.nvim'
 
     -- Syntax stuff
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'sheerun/vim-polyglot'
 
     -- Theming
-    use {'dracula/vim', as = 'dracula'}
---     use 'romgrk/barbar.nvim'
-	use 'akinsho/nvim-bufferline.lua'
+    use 'folke/tokyonight.nvim'
+    -- use 'marko-cerovac/material.nvim'
+    use 'romgrk/barbar.nvim'
     use { 'glepnir/galaxyline.nvim', branch = 'main' }
     use 'glepnir/dashboard-nvim'
     use 'dominikduda/vim_current_word'
@@ -45,6 +50,7 @@ return require('packer').startup(function()
 
     -- Icons
     use 'kyazdani42/nvim-web-devicons'
+    -- use 'yamatsum/nvim-nonicons' -- would like to use this if i can figure out my fucking fonts
 
     -- File explorer
     use 'kyazdani42/nvim-tree.lua'
@@ -52,8 +58,19 @@ return require('packer').startup(function()
     -- Quality of life stuff
     use 'tpope/vim-commentary'
     use 'windwp/nvim-autopairs'
-    use 'tpope/vim-surround'
+    use 'monaqa/dial.nvim'
+    use 'simrat39/symbols-outline.nvim'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
-    use 'vimlab/split-term.vim'
-	use 'karb94/neoscroll.nvim'
+    use 'akinsho/nvim-toggleterm.lua'
+    use 'karb94/neoscroll.nvim'
+    use 'norcalli/snippets.nvim'
+    -- use 'Xuyuanp/scrollbar.nvim'
+    use 'lewis6991/gitsigns.nvim'
+    use {
+        'phaazon/hop.nvim',
+        as = 'hop',
+        config = function()
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
 end)

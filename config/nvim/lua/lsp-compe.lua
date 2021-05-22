@@ -13,20 +13,46 @@ require'compe'.setup {
     documentation = true;
 
     source = {
-		path = {kind = "  "},
---         buffer = {kind = "  "},
+		path = {kind = " (Path)"},
+        omni = false,
 		buffer = false,
-        calc = {kind = "  "},
-        -- vsnip = {kind = "  "},
-        nvim_lsp = {kind = "  "},
-        nvim_lua = {kind = "  "},
-		-- nvim_lua = false,
-        spell = {kind = "  "},
+        calc = {kind = "ﲂ (Calc)"},
+        -- vsnip = {kind = " (Snippet)"},
+        vsnip = false,
+        nvim_lsp = {kind = "識 (LSP)"},
+        nvim_lua = {kind = " (Lua)"},
+        spell = {kind = " (Spell)"},
         tags = false,
-        treesitter = {kind = "  "},
-        -- emoji = {kind = " ﲃ ", filetypes={"markdown", "text"}}
-        -- for emoji press : (idk if that in compe tho)
+        treesitter = false,
     }
+}
+
+vim.lsp.protocol.CompletionItemKind = {
+    "   (Text) ",
+    "   (Method)",
+    "   (Function)",
+    "   (Constructor)",
+    " ﴲ  (Field)",
+    "[] (Variable)",
+    "   (Class)",
+    " ﰮ  (Interface)",
+    "   (Module)",
+    " 襁 (Property)",
+    "   (Unit)",
+    "   (Value)",
+    " 練 (Enum)",
+    "   (Keyword)",
+    "   (Snippet)",
+    "   (Color)",
+    "   (File)",
+    "   (Reference)",
+    "   (Folder)",
+    "   (EnumMember)",
+    " ﲀ  (Constant)",
+    " ﳤ  (Struct)",
+    "   (Event)",
+    "   (Operator)",
+    "   (TypeParameter)"
 }
 
 local t = function(str)
@@ -42,19 +68,24 @@ local check_back_space = function()
     end
 end
 
--- idk bro im just copy pasting what's on the wiki at this point
+-- idk bro im just copy pasting
 _G.tab_complete = function()
     if vim.fn.pumvisible() == 1 then
         return t "<C-n>"
+    -- elseif vim.fn.call("vsnip#available", {1}) == 1 then
+    --     return t "<Plug>(vsnip-expand-or-jump)"
     elseif check_back_space() then
         return t "<Tab>"
     else
         return vim.fn['compe#complete']()
     end
 end
+
 _G.s_tab_complete = function()
     if vim.fn.pumvisible() == 1 then
         return t "<C-p>"
+    -- elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
+        -- return t "<Plug>(vsnip-jump-prev)"
     else
         return t "<S-Tab>"
     end

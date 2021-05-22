@@ -2,9 +2,9 @@ local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {
         find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-        prompt_position = "bottom",
-        prompt_prefix = " ",
-        selection_caret = ">  ",
+        prompt_position = "top",
+        prompt_prefix = "  ",
+        selection_caret = "  ",
         entry_prefix = "  ",
         initial_mode = "insert",
         selection_strategy = "reset",
@@ -19,10 +19,11 @@ require('telescope').setup {
         width = 0.75,
         preview_cutoff = 120,
         results_height = 1,
-        results_width = 0.8,
+        results_width = 0.6,
         border = {},
-        borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
--- 		borderchars = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+        -- borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
+		-- borderchars = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+		borderchars = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
         color_devicons = true,
         use_less = true,
         set_env = {['COLORTERM'] = 'truecolor'},
@@ -42,6 +43,12 @@ require('telescope').setup {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous
             }
+        }
+    },
+    extensions = {
+        fzy_native = {
+            override_generic_sorter = false,
+            override_file_sorter = true,
         }
     }
 }

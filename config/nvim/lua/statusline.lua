@@ -1,37 +1,39 @@
 vim.cmd [[packadd galaxyline.nvim]]
 local fileinfo = require 'galaxyline.provider_fileinfo'
 local devicons = require 'nvim-web-devicons'
+local condition = require('galaxyline.condition')
 local gl = require('galaxyline')
 
 local gls = gl.section
 gl.short_line_list = {'packager', 'NvimTree', 'dbui', 'vista'}
 
 local colors = {
-    bg = '#181621',
-    fg = '#f5d6f5',
-    blue = '#7fe8de',
-    green = '#94e77e',
-    purple = '#ccaaff',
-    orange = '#ffe100',
-    red1 = '#d77392',
-    red2 = '#e11537',
+    -- bg = '#1a1b26',
+    bg = '#1d202f',
+    fg = '#c0caf5',
+    red = '#f7768e',
+    green = '#9ece6a',
+    orange = '#e0af68',
+    blue = '#7aa2f7',
+    purple = '#bb9af2',
+    cyan = '#7dcfff',
     yellow = '#ffe771'
 }
 
 local mode_map = {
-    ['n'] = {'NORMAL', colors.purple},
-    ['i'] = {'INSERT', colors.blue},
-    ['R'] = {'REPLACE', colors.red1},
-    ['v'] = {'VISUAL', colors.yellow},
-    ['V'] = {'V-LINE', colors.yellow},
-    ['c'] = {'COMMAND', colors.green},
-    ['s'] = {'SELECT', colors.orange},
-    ['S'] = {'S-LINE', colors.orange},
-    ['t'] = {'TERMINAL', colors.blue},
-    [''] = {'V-BLOCK', colors.yellow},
-    [''] = {'S-BLOCK', colors.yellow},
-    ['Rv'] = {'VIRTUAL'},
-    ['rm'] = {'--MORE'}
+    ['n'] = {'normal', colors.blue},
+    ['i'] = {'insert', colors.cyan},
+    ['R'] = {'replace', colors.red},
+    ['v'] = {'visual', colors.yellow},
+    ['V'] = {'vline', colors.yellow},
+    ['c'] = {'command', colors.green},
+    ['s'] = {'select', colors.orange},
+    ['S'] = {'sline', colors.orange},
+    ['t'] = {'terminal', colors.blue},
+    [''] = {'vblock', colors.yellow},
+    [''] = {'sblock', colors.yellow},
+    ['Rv'] = {'virtual'},
+    ['rm'] = {'--more'}
 }
 
 local sep = {
@@ -42,11 +44,15 @@ local sep = {
 }
 
 local icons = {
-    locker      = '',
-    unsaved     = '',
+    locked      = '',
+    unsaved     = '',
     info        = '',
     warn        = '',
-    err         = ''
+    err         = '',
+    git         = '',
+    gitadd      = '樂',
+    gitdel      = '',
+    gitmod      = ''
 }
 
 
@@ -111,7 +117,7 @@ gls.left[3] =
             end
             if #fname == 0 then return '' end
             if vim.bo.readonly then
-                fname = fname .. ' ' .. icons.locker
+                fname = fname .. ' ' .. icons.locked
             end
             if vim.bo.modified then
                 fname = fname .. ' ' .. icons.unsaved
@@ -123,26 +129,53 @@ gls.left[3] =
         separator_highlight = 'GalaxyViModeInv'
     }
 }
+gls.left[4] = {
+    GitIcon = {
+        provider = function()
+            return ' ' .. icons.git
+        end,
+        condition = condition.check_git_workspace,
+        separator = ' ',
+        separator_highlight = {'NONE', colors.bg},
+        highlight = {colors.orange, colors.bg}
+    }
+}
+gls.left[5] = {
+    GitBranch = {
+        provider = 'GitBranch',
+        condition = condition.check_git_workspace,
+        separator = ' ',
+        separator_highlight = {'NONE', colors.bg},
+        highlight = {colors.fg, colors.bg}
+    }
+}
+gls.left[6] = {
+    DiffAdd = {
+        provider = 'DiffAdd',
+        condition = condition.hide_in_width,
+        icon = icons.gitadd,
+        highlight = {colors.green, colors.bg}
+    }
+}
+gls.left[7] = {
+    DiffModified = {
+        provider = 'DiffModified',
+        condition = condition.hide_in_width,
+        icon = icons.gitmod,
+        highlight = {colors.blue, colors.bg}
+    }
+}
+gls.left[8] = {
+    DiffRemove = {
+        provider = 'DiffRemove',
+        condition = condition.hide_in_width,
+        icon = icons.gitdel,
+        highlight = {colors.red, colors.bg}
+    }
+}
 
 
 gls.right[1] =
-{
-    LspStatus = {
-        provider = function()
-            local connected =
-              not vim.tbl_isempty(vim.lsp.buf_get_clients(0))
-            if connected then
-                return ''
-            else
-                return ''
-            end
-        end,
-        highlight = {colors.fg, colors.bg},
-        separator = sep.right,
-        separator_highlight = 'GalaxyViModeInv'
-    }
-}
-gls.right[2] =
 {
     DiagnosticWarn = {
         provider = function()
@@ -150,10 +183,12 @@ gls.right[2] =
             if n == 0 then return '' end
             return string.format(' %s %d ', icons.warn, n)
         end,
-        highlight = {colors.yellow, colors.bg}
+        highlight = {colors.yellow, colors.bg},
+        separator = sep.right,
+        separator_highlight = 'GalaxyViModeInv'
     }
 }
-gls.right[3] =
+gls.right[2] =
 {
     DiagnosticError = {
         provider = function()
@@ -161,10 +196,10 @@ gls.right[3] =
             if n == 0 then return '' end
             return string.format(' %s %d ', icons.err, n)
         end,
-        highlight = {colors.red2, colors.bg}
+        highlight = {colors.red, colors.bg}
     }
 }
-gls.right[4] =
+gls.right[3] =
 {
     FileType = {
         provider = function()
@@ -175,6 +210,20 @@ gls.right[4] =
         highlight = {colors.fg, colors.bg},
         separator = sep.right,
         separator_highlight = 'GalaxyViModeInv'
+    }
+}
+gls.right[4] =
+{
+    FileIcon = {
+        provider = function()
+            local fname, ext = vim.fn.expand '%:t', vim.fn.expand '%:e'
+            local icon, iconhl = devicons.get_icon(fname, ext)
+            if icon == nil then return '' end
+            local fg = vim.fn.synIDattr(vim.fn.hlID(iconhl), 'fg')
+            highlight('GalaxyFileIcon', fg, colors.bg)
+            return ' ' .. icon .. ' '
+        end,
+        condition = buffer_not_empty
     }
 }
 gls.right[5] =
@@ -203,6 +252,7 @@ gls.right[6] =
         separator_highlight = 'GalaxyViMode'
     }
 }
+
 
 for k, v in pairs(gls.left) do gls.short_line_left[k] = v end
 table.remove(gls.short_line_left, 1)
