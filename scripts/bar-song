@@ -1,0 +1,24 @@
+#!/bin/sh
+
+state="$(mpc | sed '2!d ; s/ .*//')"
+
+icon=""
+case $state in
+	"[playing]") icon="" ;;
+	"[paused]") icon="" ;;
+	*) icon="" ;;
+esac
+
+text="$(tail -n1 < /tmp/mpcscroll | sed 's/^/ /')"
+
+case $text in
+	" ") exit 0 ;;
+	*) echo " ^c#f7768e^$icon $text" ;;
+esac
+
+case $BUTTON in
+	1) mpc toggle ;;  # right click, pause/unpause
+	3) setsid -f "$TERMINAL" -e ncmpcpp ;;  # right click, pause/unpause
+	4) mpc volume +1;;
+	5) mpc volume -1 ;;
+esac

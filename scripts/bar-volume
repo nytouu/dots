@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case $BUTTON in
+	2) pamixer -t ;;
+	3) setsid -f "$TERMINAL" -e pulsemixer ;;
+	4) pamixer --allow-boost -i 1 ;;
+	5) pamixer --allow-boost -d 1 ;;
+esac
+
+[ $(pamixer --get-mute) = true ] && echo " ^c#bb9af2^婢" && exit
+
+vol="$(pamixer --get-volume)"
+
+if [ "$vol" -gt "70" ]; then
+	icon="墳"
+elif [ "$vol" -lt "30" ]; then
+	icon="墳"
+else
+	icon="奔"
+fi
+
+echo " ^c#bb9af2^$icon $vol%"

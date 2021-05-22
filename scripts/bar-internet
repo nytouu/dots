@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Show wifi 📶 and percent strength or 📡 if none.
+# Show 🌐 if connected to ethernet or ❎ if none.
+
+case $BUTTON in
+	3) setsid -f "$TERMINAL" -e nmtui ; pkill -RTMIN+4 hydrablocks ;;
+esac
+
+case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
+	down) wifiicon=" " ;;
+	up) wifiicon="$(awk '/^\s*w/ { print " ^c#9ece6a^ ", int($3 * 100 / 70) "% " }' /proc/net/wireless)" ;;
+esac
+
+printf "%s%s\n" "$wifiicon" "$(sed "s/down/ ^c#f7768e^/; s/up/ ^c#9ece6a^/" /sys/class/net/e*/operstate 2>/dev/null)"
