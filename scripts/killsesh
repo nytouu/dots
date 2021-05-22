@@ -4,6 +4,3 @@ killall hydrablocks
 killall zscroll
 killall xwinwrap
 killall mpv
-killall pipewire
-killall pipewire-pulse
-killall pipewire-media-session
