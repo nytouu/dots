@@ -33,7 +33,6 @@ vim.o.confirm = true
 vim.o.showtabline = 2
 vim.o.showmode = false
 vim.o.termguicolors = true
-vim.o.t_Co = "256"
 vim.o.updatetime = 300
 vim.o.timeoutlen = 1500
 vim.bo.smartindent = true
