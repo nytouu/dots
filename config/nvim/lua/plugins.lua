@@ -40,7 +40,8 @@ return require('packer').startup(function()
     -- Theming
     use 'folke/tokyonight.nvim'
     -- use 'marko-cerovac/material.nvim'
-    use 'romgrk/barbar.nvim'
+    -- use 'romgrk/barbar.nvim'
+    use { 'akinsho/nvim-bufferline.lua' }
     use { 'glepnir/galaxyline.nvim', branch = 'main' }
     use 'glepnir/dashboard-nvim'
     use 'dominikduda/vim_current_word'

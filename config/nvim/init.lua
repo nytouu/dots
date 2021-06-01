@@ -6,7 +6,7 @@ require('keys')
 
 require('colors')
 require('statusline')
-require('bufferline')
+require('buffer')
 require('nvtree')
 require('tree')
 require('dashboard')
