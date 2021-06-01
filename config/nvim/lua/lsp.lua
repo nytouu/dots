@@ -5,13 +5,28 @@ DATA_PATH = vim.fn.stdpath('data')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+local signaturecfg = {
+        bind = true, -- This is mandatory, otherwise border config won't get registered.
+                    -- If you want to hook lspsaga or other signature handler, pls set to false
+        doc_lines = 5, -- only show one line of comment set to 0 if you do not want API comments be shown
+
+        hint_enable = true, -- virtual hint enable
+        hint_prefix = "🐼 ",  -- Panda for parameter
+        hint_scheme = "String",
+        use_lspsaga = true,  -- set to true if you want to use lspsaga popup
+        handler_opts = {
+        border = "double"   -- double, single, shadow, none
+        },
+        decorator = {"`", "`"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown signatureHelp
+    }
+
 local servers = {
 	{
         name = 'vimls',
         config = {
             cmd = {DATA_PATH .. "/lspinstall/vim/node_modules/.bin/vim-language-server", "--stdio"},
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -20,7 +35,7 @@ local servers = {
         config = {
             cmd = {DATA_PATH .. "/lspinstall/go/gopls"},
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -29,7 +44,7 @@ local servers = {
         config = {
             cmd = {DATA_PATH .. "/lspinstall/rust/rust-analyzer"},
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -38,7 +53,7 @@ local servers = {
         config = {
             cmd = {DATA_PATH .. "/lspinstall/yaml/node_modules/.bin/yaml-language-server", "--stdio"},
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -48,7 +63,7 @@ local servers = {
             cmd = {DATA_PATH .. "/lspinstall/bash/node_modules/.bin/bash-language-server", "start"},
             filetypes = { "sh", "zsh" },
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -59,7 +74,7 @@ local servers = {
             cmd = {"node", DATA_PATH .. "/lspinstall/html/vscode-html/html-language-features/server/dist/node/htmlServerMain.js", "--stdio"},
             capabilities = capabilities,
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -79,7 +94,7 @@ local servers = {
                 }
             },
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -96,7 +111,7 @@ local servers = {
                 })
             },
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     },
@@ -124,7 +139,7 @@ local servers = {
                 }
             },
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
 		}
 	},
@@ -142,7 +157,7 @@ local servers = {
                 }
             },
             on_attach = function(client, bufnr)
-                require "lsp_signature".on_attach()  -- Note: add in lsp client on-attach
+                require "lsp_signature".on_attach(signaturecfg)  -- Note: add in lsp client on-attach
             end
         }
     }
