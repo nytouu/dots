@@ -35,9 +35,9 @@ vim.api.nvim_set_keymap('n', '<Leader>fs', ':e $HOME/.config/nvim/lua/settings.l
 vim.api.nvim_set_keymap('n', '<Leader>qq', ':q<CR>', {noremap = true, silent = true})
 
 -- buffer movement
-vim.api.nvim_set_keymap('n', '<Leader>x', ':BufferClose<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-j>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-k>', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>x', ':Bdelete<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 
 -- better window movement

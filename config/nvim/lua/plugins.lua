@@ -58,6 +58,7 @@ return require('packer').startup(function()
 
     -- Quality of life stuff
     use 'tpope/vim-commentary'
+    use 'famiu/bufdelete.nvim'
     use 'windwp/nvim-autopairs'
     use 'monaqa/dial.nvim'
     use 'simrat39/symbols-outline.nvim'
