@@ -18,7 +18,6 @@ require('scroll')
 require('lsptrouble')
 require('term')
 require('git')
-require('outline')
 require('diaal')
 
 require('lsp-compe')

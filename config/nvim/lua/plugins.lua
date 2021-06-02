@@ -61,7 +61,6 @@ return require('packer').startup(function()
     use 'famiu/bufdelete.nvim'
     use 'windwp/nvim-autopairs'
     use 'monaqa/dial.nvim'
-    use 'simrat39/symbols-outline.nvim'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
     use 'akinsho/nvim-toggleterm.lua'
     use 'karb94/neoscroll.nvim'
