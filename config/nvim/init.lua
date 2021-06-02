@@ -19,6 +19,7 @@ require('lsptrouble')
 require('term')
 require('git')
 require('diaal')
+require('discord')
 
 require('lsp-compe')
 require('lsp-kind')
