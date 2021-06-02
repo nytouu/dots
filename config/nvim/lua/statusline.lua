@@ -37,10 +37,14 @@ local mode_map = {
 }
 
 local sep = {
-    rightfull   = '',
-    right       = '',
-    leftfull    = '',
-    left        = ''
+    rightfull   = '▐',
+    right       = '▕',
+    leftfull    = '▌',
+    left        = '▏'
+    -- rightfull   = '',
+    -- right       = '',
+    -- leftfull    = '',
+    -- left        = ''
 }
 
 local icons = {
@@ -50,9 +54,9 @@ local icons = {
     warn        = '',
     err         = '',
     git         = '',
-    gitadd      = '樂',
-    gitdel      = '',
-    gitmod      = ''
+    gitadd      = '+',
+    gitdel      = '-',
+    gitmod      = '~'
 }
 
 
