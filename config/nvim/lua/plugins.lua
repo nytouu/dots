@@ -68,11 +68,5 @@ return require('packer').startup(function()
     use 'norcalli/snippets.nvim'
     -- use 'Xuyuanp/scrollbar.nvim'
     use 'lewis6991/gitsigns.nvim'
-    use {
-        'phaazon/hop.nvim',
-        as = 'hop',
-        config = function()
-        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-        end
-    }
+    use 'phaazon/hop.nvim'
 end)

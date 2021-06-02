@@ -8,6 +8,6 @@ require'gitsigns'.setup{
         delete = {hl = "GitGutterDelete", text = "▌"},
         topdelete = {hl = "GitGutterDelete", text = "▌"},
         changedelete = {hl = "GitGutterChange", text = "▌"}
-        },
+    },
     numhl = false
 }
