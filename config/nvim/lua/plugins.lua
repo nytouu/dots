@@ -57,15 +57,20 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-tree.lua'
 
     -- Quality of life stuff
+    use 'famiu/nvim-reload'
     use 'tpope/vim-commentary'
-    use 'famiu/bufdelete.nvim'
     use 'windwp/nvim-autopairs'
-    use 'monaqa/dial.nvim'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
     use 'akinsho/nvim-toggleterm.lua'
     use 'karb94/neoscroll.nvim'
     use 'norcalli/snippets.nvim'
-    -- use 'Xuyuanp/scrollbar.nvim'
     use 'lewis6991/gitsigns.nvim'
+    use 'famiu/bufdelete.nvim'
     use 'phaazon/hop.nvim'
+
+    -- Not useful but cool stuff
+    use 'andweeb/presence.nvim'
+    use 'Pocco81/TrueZen.nvim'
+    -- use 'Xuyuanp/scrollbar.nvim'
+    use 'monaqa/dial.nvim'
 end)
