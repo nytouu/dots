@@ -73,5 +73,6 @@ return require('packer').startup(function()
     use 'andweeb/presence.nvim'
     use 'Pocco81/TrueZen.nvim'
     -- use 'Xuyuanp/scrollbar.nvim'
+    use 'dstein64/nvim-scrollview'
     use 'monaqa/dial.nvim'
 end)

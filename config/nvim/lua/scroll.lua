@@ -10,4 +10,5 @@ require('neoscroll').setup({
 })
 -- vim.cmd('source $HOME/.config/nvim/lua/scroll.vim')
 
-vim.g.scrollbar_excluded_filetypes = 'NvimTree'
+-- vim.g.scrollbar_excluded_filetypes = 'NvimTree'
+vim.g.scrollview_excluded_filetypes = {'NvimTree'}
