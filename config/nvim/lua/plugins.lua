@@ -26,7 +26,6 @@ return require('packer').startup(function()
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
 	-- use 'kosayoda/nvim-lightbulb'
-    use 'folke/lsp-trouble.nvim'
     use 'ray-x/lsp_signature.nvim'
 
     -- Colors
@@ -39,12 +38,16 @@ return require('packer').startup(function()
 
     -- Theming
     use 'folke/tokyonight.nvim'
-    -- use 'marko-cerovac/material.nvim'
-    -- use 'romgrk/barbar.nvim'
-    use { 'akinsho/nvim-bufferline.lua' }
-    use { 'glepnir/galaxyline.nvim', branch = 'main' }
     use 'glepnir/dashboard-nvim'
     use 'dominikduda/vim_current_word'
+
+    -- UI stuff
+    use 'folke/lsp-trouble.nvim'
+    use 'akinsho/nvim-bufferline.lua'
+    use 'famiu/bufdelete.nvim'
+    -- use 'romgrk/barbar.nvim'
+    use { 'glepnir/galaxyline.nvim', branch = 'main' }
+    use 'akinsho/nvim-toggleterm.lua'
 
     -- Telescope
     use 'nvim-telescope/telescope.nvim'
@@ -61,11 +64,9 @@ return require('packer').startup(function()
     use 'tpope/vim-commentary'
     use 'windwp/nvim-autopairs'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
-    use 'akinsho/nvim-toggleterm.lua'
     use 'karb94/neoscroll.nvim'
     use 'norcalli/snippets.nvim'
     use 'lewis6991/gitsigns.nvim'
-    use 'famiu/bufdelete.nvim'
     use 'phaazon/hop.nvim'
 
     -- Not useful but cool stuff
