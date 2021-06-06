@@ -55,3 +55,4 @@ vim.g.minimap_highlight_range = true
 vim.g.minimap_highlight = 'MinimapCurrentLine'
 vim.cmd('hi MinimapCurrentLine guifg=#77a2f7 guibg=#2c3044')
 -- vim.cmd('hi MinimapCurrentLine guifg=#77a2f7 guibg=#24283b')
+vim.o.guifont = "TerminessTTF Nerd Font:h17"
