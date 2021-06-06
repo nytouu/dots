@@ -3,7 +3,7 @@ vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true}
 vim.g.mapleader = ' '
 
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>xh', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- fold open/close
 vim.api.nvim_set_keymap('n', '<Leader>Fo', ':foldopen<CR>', {silent = true})
@@ -23,12 +23,12 @@ vim.api.nvim_set_keymap('n', '<Leader>ui', ':LspTroubleOpen<CR><C-k>:NvimTreeOpe
 vim.api.nvim_set_keymap('n', '<Leader>uo', ':LspTroubleClose<CR>:NvimTreeClose<CR>', {silent = true})
 
 -- hop
-vim.api.nvim_set_keymap('n', '<Leader>g', "<cmd>lua require'hop'.hint_words()<cr>", {})
+vim.api.nvim_set_keymap('n', '<Leader>h', ":HopChar2<CR>", {})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', {silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>ff', ':DashboardFindFile<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<Leader>fw', ':DashboardFindWord<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>fg', ':DashboardFindWord<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>fh', ':DashboardFindHistory<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>fn', ':DashboardNewFile<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>fs', ':e $HOME/.config/nvim/lua/settings.lua<CR>', {noremap = true, silent = true})
@@ -37,7 +37,7 @@ vim.api.nvim_set_keymap('n', '<Leader>qq', ':q<CR>', {noremap = true, silent = t
 -- buffer movement
 vim.api.nvim_set_keymap('n', '<S-j>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-k>', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<Leader>x', ':Bdelete<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>xx', ':Bdelete<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 
 -- better window movement
