@@ -71,6 +71,9 @@ vim.cmd([[
     nnoremap <silent> <C-Right> :vertical resize +2<CR>
 ]])
 
+-- commenting
+vim.api.nvim_set_keymap('n', 'gcc', ':lua require("nvim-commaround").toggle_comment()<CR>', {silent = true})
+
 -- better indenting
 vim.api.nvim_set_keymap('n', '<M-h>', '<<', {silent = true})
 vim.api.nvim_set_keymap('n', '<M-l>', '>>', {silent = true})
