@@ -23,6 +23,7 @@ require('icons')
 require('diaal')
 require('discord')
 require('motion')
+require('zen')
 
 require('lsp-compe')
 require('lsp-kind')
