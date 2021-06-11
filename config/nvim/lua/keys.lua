@@ -2,6 +2,9 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
+-- save
+vim.api.nvim_set_keymap('n', '<Leader>ss', ':w<CR>', {silent = true})
+
 -- no hl
 vim.api.nvim_set_keymap('n', '<Leader>xh', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
@@ -10,20 +13,18 @@ vim.api.nvim_set_keymap('n', '<Leader>Fo', ':foldopen<CR>', {silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>Fc', ':foldopen<CR>', {silent = true})
 
 -- lsp trouble
-vim.api.nvim_set_keymap('n', '<Leader>lt', ':LspTroubleToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>T', ':LspTroubleToggle<CR>', {noremap = true, silent = true})
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 -- toggleterm
 vim.api.nvim_set_keymap('n', '<Leader>t', ':ToggleTerm<CR>', {noremap = true, silent = true})
--- outline
-vim.api.nvim_set_keymap('n', '<Leader>o', ':SymbolsOutline<CR>', {noremap = true, silent = true})
 
 -- for vscode-like ui, there's probably a better way to do this but it works so dont care
 vim.api.nvim_set_keymap('n', '<Leader>ui', ':LspTroubleOpen<CR><C-k>:NvimTreeOpen<CR><C-l>', {silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>uo', ':LspTroubleClose<CR>:NvimTreeClose<CR>', {silent = true})
 
 -- hop
-vim.api.nvim_set_keymap('n', '<Leader>h', ":HopChar2<CR>", {})
+vim.api.nvim_set_keymap('n', '<Leader>h', ":HopChar2<CR>", {silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', {silent = true})
