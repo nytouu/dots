@@ -1,7 +1,7 @@
 require('bufferline').setup{
 	options = {
 		buffer_close_icon = "",
-        modified_icon = "●",
+        modified_icon = "",
         left_trunc_marker = "",
         right_trunc_marker = "",
         max_name_length = 18,
@@ -16,11 +16,11 @@ require('bufferline').setup{
     highlights = {
         background = {
             guifg = "#414868",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
         },
         fill = {
             guifg = "#414868",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
             -- guibg = "NONE"
         },
         buffer_selected = {
@@ -30,19 +30,19 @@ require('bufferline').setup{
         },
         buffer_visible = {
             guifg = "#414868",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
         },
         separator_visible = {
             guifg = "#24283b",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
         },
         separator_selected = {
-            guifg = "#1d202f",
+            guifg = "#1f2335",
             guibg = "#24283b"
         },
         separator = {
             guifg = "#414868",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
         },
         indicator_selected = {
             guifg = "#7aa2f7",
@@ -50,7 +50,7 @@ require('bufferline').setup{
         },
         modified = {
             guifg = "#414868",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
         },
         modified_selected = {
             guifg = "#c0caf5",
@@ -58,7 +58,7 @@ require('bufferline').setup{
         },
         modified_visible = {
             guifg = "#c0caf5",
-            guibg = "#1d202f"
+            guibg = "#1f2335"
         }
     }
 }
