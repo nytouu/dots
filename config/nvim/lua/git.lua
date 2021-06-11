@@ -3,11 +3,11 @@
 require'gitsigns'.setup{
     debug_mode = false,
     signs = {
-        add = {hl = "GitGutterAdd", text = "▌"},
-        change = {hl = "GitGutterChange", text = "▌"},
-        delete = {hl = "GitGutterDelete", text = "▌"},
-        topdelete = {hl = "GitGutterDelete", text = "▌"},
-        changedelete = {hl = "GitGutterChange", text = "▌"}
+        add = {hl = "DiffAdd", text = "▌"},
+        change = {hl = "DiffChange", text = "▌"},
+        delete = {hl = "DiffDelete", text = "▌"},
+        topdelete = {hl = "DiffDelete", text = "▌"},
+        changedelete = {hl = "DiffChange", text = "▌"}
     },
     numhl = false
 }
