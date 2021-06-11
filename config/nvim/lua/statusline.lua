@@ -1,3 +1,4 @@
+-- OLD STATUS LINE
 vim.cmd [[packadd galaxyline.nvim]]
 local fileinfo = require 'galaxyline.provider_fileinfo'
 local devicons = require 'nvim-web-devicons'
@@ -9,7 +10,8 @@ gl.short_line_list = {'packager', 'NvimTree', 'dbui', 'vista'}
 
 local colors = {
     -- bg = '#1a1b26',
-    bg = '#1d202f',
+    -- bg = '#1d202f',
+    bg = '#1f2335',
     fg = '#c0caf5',
     red = '#f7768e',
     green = '#9ece6a',
@@ -54,9 +56,9 @@ local icons = {
     warn        = '',
     err         = '',
     git         = '',
-    gitadd      = '+',
-    gitdel      = '-',
-    gitmod      = '~'
+    gitadd      = '',
+    gitdel      = '',
+    gitmod      = '柳'
 }
 
 
