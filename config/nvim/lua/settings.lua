@@ -2,7 +2,7 @@ vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_italic_comments = false
 vim.g.tokyonight_sidebars = { "NvimTree", "Outline", "terminal", "packer" }
--- vim.g.tokyonight_dark_sidebar = false false
+-- vim.g.tokyonight_dark_sidebar = false
 vim.cmd('colorscheme tokyonight')
 
 vim.o.encoding = "utf-8"
@@ -21,7 +21,7 @@ vim.wo.cursorline = true
 vim.o.title = true
 TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="'..TERMINAL..'"')
-vim.o.titlestring="nvim - %t %r %m"
+vim.o.titlestring="nvim - %t %r"
 vim.o.titlelen = 50
 vim.wo.number = true
 vim.wo.relativenumber = false
@@ -49,9 +49,10 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.cmd('let g:vim_current_word#highlight_current_word = 0')
 vim.cmd('let g:vim_current_word#highlight_twins = 1')
--- vim.cmd('let g:vim_current_word#highlight_delay = 500')
+vim.cmd('let g:vim_current_word#highlight_delay = 0')
 vim.cmd('hi CurrentWordTwins guibg=#2c3044')
-vim.g.minimap_highlight_range = true
-vim.g.minimap_highlight = 'MinimapCurrentLine'
-vim.cmd('hi MinimapCurrentLine guifg=#77a2f7 guibg=#2c3044')
--- vim.cmd('hi MinimapCurrentLine guifg=#77a2f7 guibg=#24283b')
+
+-- neovide stuff
+vim.o.guifont = "RobotoMono Nerd Font:h17"
+vim.g.neovide_refresh_rate = 140
+vim.g.neovide_cursor_animation_length = 0
