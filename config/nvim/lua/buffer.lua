@@ -1,6 +1,7 @@
 require('bufferline').setup{
 	options = {
 		buffer_close_icon = "",
+        indicator_icon = '▎',
         modified_icon = "",
         left_trunc_marker = "",
         right_trunc_marker = "",
@@ -11,7 +12,13 @@ require('bufferline').setup{
         view = "default",
         show_buffer_close_icons = true,
 		show_close_icon = false,
-        separator_style = "thin"
+        separator_style = "thin",
+        offsets = {
+            {
+                filetype = "NvimTree",
+                text = "Files"
+            }
+        },
     },
     highlights = {
         background = {
