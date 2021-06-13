@@ -60,6 +60,7 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-tree.lua'
 
     -- Quality of life stuff
+    use 'folke/which-key.nvim'
     use 'famiu/nvim-reload'
     use 'gennaro-tedesco/nvim-commaround'
     use 'windwp/nvim-autopairs'
