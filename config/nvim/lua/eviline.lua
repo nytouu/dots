@@ -130,7 +130,7 @@ gls.right[1] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     condition = checkwidth,
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.red,colors.bg}
   }
 }
@@ -139,7 +139,7 @@ gls.right[2] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     condition = checkwidth,
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.yellow,colors.bg}
   }
 }
@@ -148,7 +148,7 @@ gls.right[3] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     condition = checkwidth,
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.cyan,colors.bg}
   }
 }
@@ -157,7 +157,7 @@ gls.right[4] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     condition = checkwidth,
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.blue,colors.bg}
   }
 }
