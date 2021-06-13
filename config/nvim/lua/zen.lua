@@ -33,11 +33,12 @@ require("true-zen").setup({
 		shown_signcolumn = "no"
 	},
 	ataraxis = {
-		just_do_it_for_me = false,
-		left_padding = 5,
-		right_padding = 5,
+		just_do_it_for_me = true,
+		left_padding = 10,
+		right_padding = 10,
 		top_padding = 1,
-		bottom_padding = 1
+		bottom_padding = 1,
+		force_hide_statusline = true
 	},
 	integrations = {
 		integration_galaxyline = true,
