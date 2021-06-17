@@ -62,7 +62,7 @@ return require('packer').startup(function()
     -- Quality of life stuff
     use 'folke/which-key.nvim'
     use 'famiu/nvim-reload'
-    use 'gennaro-tedesco/nvim-commaround'
+    use 'terrortylor/nvim-comment'
     use 'windwp/nvim-autopairs'
     use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
     use 'karb94/neoscroll.nvim'

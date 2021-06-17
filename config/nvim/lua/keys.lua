@@ -1,3 +1,5 @@
+require('nvim_comment').setup()
+
 -- leader
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
@@ -71,9 +73,6 @@ vim.cmd([[
     nnoremap <silent> <C-Left>  :vertical resize -2<CR>
     nnoremap <silent> <C-Right> :vertical resize +2<CR>
 ]])
-
--- commenting
-vim.api.nvim_set_keymap('n', 'gcc', ':lua require("nvim-commaround").toggle_comment()<CR>', {silent = true})
 
 -- better indenting
 vim.api.nvim_set_keymap('n', '<M-h>', '<<', {silent = true})
