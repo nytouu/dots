@@ -10,7 +10,7 @@ if [ "$percent" -lt 10 ]; then
 elif [ "$percent" -le 30 ]; then
     icon="$orange"
 elif [ "$percent" -le 60 ]; then
-    icon="$orange"
+    icon="$green"
 elif [ "$percent" -le 90 ]; then
     icon="$green"
 else
