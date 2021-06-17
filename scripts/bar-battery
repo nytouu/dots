@@ -1,0 +1,24 @@
+#!/bin/sh
+
+. "$HOME"/scripts/bar-colors
+
+state="$(cat /sys/class/power_supply/BAT*/status)"
+percent="$(cat /sys/class/power_supply/BAT*/capacity)"
+
+if [ "$percent" -lt 10 ]; then
+    icon="$red"
+elif [ "$percent" -le 30 ]; then
+    icon="$orange"
+elif [ "$percent" -le 60 ]; then
+    icon="$orange"
+elif [ "$percent" -le 90 ]; then
+    icon="$green"
+else
+    icon="$green"
+fi
+
+case $state in
+ "Charging" ) charge="$yellow ﮣ" ;;
+esac
+
+echo "$icon $charge $percent% "
