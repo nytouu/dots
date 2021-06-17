@@ -22,7 +22,7 @@ return require('packer').startup(function()
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'glepnir/lspsaga.nvim'
-    -- use 'onsails/lspkind-nvim'
+    use 'onsails/lspkind-nvim'
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
 	-- use 'kosayoda/nvim-lightbulb'
