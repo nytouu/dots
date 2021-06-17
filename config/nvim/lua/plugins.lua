@@ -69,6 +69,7 @@ return require('packer').startup(function()
     use 'norcalli/snippets.nvim'
     use 'lewis6991/gitsigns.nvim'
     use 'phaazon/hop.nvim'
+	use 'jeffkreeftmeijer/vim-numbertoggle'
 
     -- Not useful but cool stuff
     use 'andweeb/presence.nvim'
