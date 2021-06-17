@@ -34,7 +34,6 @@ return require('packer').startup(function()
 
     -- Syntax stuff
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	use 'sheerun/vim-polyglot'
 
     -- Theming
     use 'folke/tokyonight.nvim'
