@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. "$HOME"/scripts/bar-colors
+
 case $BUTTON in
 	2) pamixer -t ;;
 	3) setsid -f "$TERMINAL" -e pulsemixer ;;
@@ -7,7 +9,7 @@ case $BUTTON in
 	5) pamixer --allow-boost -d 1 ;;
 esac
 
-[ $(pamixer --get-mute) = true ] && echo " ^c#bb9af2^婢" && exit
+[ $(pamixer --get-mute) = true ] && echo " $pink婢" && exit
 
 vol="$(pamixer --get-volume)"
 
@@ -19,4 +21,4 @@ else
 	icon="奔"
 fi
 
-echo " ^c#bb9af2^$icon $vol%"
+echo " $pink$icon $vol%"

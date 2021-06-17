@@ -1,6 +1,8 @@
 #!/bin/sh
 
-echo " ^c#7aa2f7^"
+. "$HOME"/scripts/bar-colors
+
+echo " $blue"
 
 case $BUTTON in
 	3) blueberry ;;

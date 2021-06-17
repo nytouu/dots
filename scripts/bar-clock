@@ -1,5 +1,8 @@
 #!/bin/sh
-echo " ^c#7dcfff^ $(date '+%A %d %B, %H:%M') "
+
+. "$HOME"/scripts/bar-colors
+
+echo " $lightblue $(date '+%a %d %B, %H:%M') "
 
 case $BUTTON in
     3) setsid -f "$TERMINAL" -e calcurse;
