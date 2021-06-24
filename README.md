@@ -18,10 +18,9 @@ browser : firefox\
 image viewer : [sxiv](https://github.com/muennich/sxiv)\
 video player : [mpv](https://github.com/mpv-player/mpv)\
 text editor : [nvim](https://github.com/nytouu/dots/tree/master/config/nvim)\
-second text editor : [vscodium](https://github.com/VSCodium/vscodium), (i barely even use it)\
-file manager : pcmanfm
-term file manager : ranger
-music player : ncmpcpp
+file manager : pcmanfm\
+term file manager : ranger\
+music player : ncmpcpp\
 agenda : calcurse
 
 # installation
