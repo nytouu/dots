@@ -1,0 +1,89 @@
+#!/bin/sh
+
+# Usage:
+# `$0`: Ask for recording type via dmenu
+# `$0 screencast`: Record both audio and screen
+# `$0 video`: Record only screen
+# `$0 audio`: Record only audio
+# `$0 kill`: Kill existing recording
+#
+# If there is already a running instance, user will be prompted to end it.
+
+. "$HOME"/scripts/bar-colors
+
+VIDS=$HOME/vids
+RES="1920x1080"
+DMENUOPTS="-x 12 -y 8 -z 1896 -i"
+
+updateicon() {
+    echo "$1" > /tmp/recordingicon
+    pkill -RTMIN+9 hydrablocks
+}
+
+killrecording() {
+    recpid="$(cat /tmp/recordingpid)"
+    # kill with SIGTERM, allowing finishing touches.
+    kill -15 "$recpid"
+    rm -f /tmp/recordingpid
+    updateicon ""
+    pkill -RTMIN+9 hydrablocks
+    # even after SIGTERM, ffmpeg may still run, so SIGKILL it.
+    sleep 3
+    kill -9 "$recpid"
+    videonotify
+}
+
+fullscreen() {
+    ffmpeg \
+    -f x11grab \
+    -s $RES \
+    -i "$DISPLAY" \
+    -c:v libx264 -qp 0 -r 30 \
+    "$VIDS/$(date +%d-%m-%G-%T).mp4" &
+    echo $! > /tmp/recordingpid
+    updateicon "$red rec"
+}
+
+sloppy() {
+    opts=$(slop -f "-video_size %wx%h -i :0.0+%x,%y")
+    ffmpeg \
+    -f x11grab \
+    $opts \
+    -c:v libx264 -qp 0 -r 30 \
+    "$VIDS/$(date +%d-%m-%G-%T).mp4" &
+    echo $! > /tmp/recordingpid
+    updateicon "$red rec s"
+}
+
+audio() {
+    ffmpeg \
+    -f pulse -i default \
+    -c:a flac \
+    "$VIDS/audio-$(date +%d-%m-%G-%T).flac" &
+    echo $! > /tmp/recordingpid
+    updateicon " rec"
+}
+
+askrecording() {
+    choice=$(printf "fullscreen\\nslop\\naudio" | dmenu $DMENUOPTS -p "record ?")
+    case "$choice" in
+        fullscreen) fullscreen;;
+        slop) sloppy;;
+        audio) audio;;
+        quit) exit 0;;
+    esac
+}
+
+asktoend() {
+    response=$(printf "yes\\nno" | dmenu $DMENUOPTS -p "end recording?") &&
+    [ "$response" = "yes" ] &&  killrecording
+}
+
+
+case "$1" in
+    fullscreen) fullscreen;;
+    slop) slop;;
+    audio) audio;;
+    kill) killrecording;;
+    *) if [ -f /tmp/recordingpid ]; then asktoend; else askrecording; fi;;
+esac

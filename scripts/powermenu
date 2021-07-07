@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DMENUOPTS="-x 12 -y 8 -z 1896 -i"
+
+choice=$(printf "poweroff\\nreboot\\nexit" | dmenu $DMENUOPTS -p "powermenu :")
+case "$choice" in
+    poweroff) doas poweroff ;;
+    reboot) doas reboot ;;
+    exit) kill -15 $(pidof hydra) ;;
+esac

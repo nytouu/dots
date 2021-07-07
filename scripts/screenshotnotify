@@ -4,4 +4,5 @@ folder="$HOME/pics/screenshots"
 filename="$(ls $folder -t | head -n 1)"
 fileloc="$folder/$filename"
 
+xclip -selection clipboard -t image/png < $fileloc
 notify-send --app-name="Screenshot saved" "$filename" --icon="$fileloc"

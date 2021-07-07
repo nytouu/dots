@@ -6,14 +6,14 @@ case $BUTTON in
 	3) setsid -f connman-gtk ; pkill -RTMIN+4 hydrablocks ;;
 esac
 
-icon=" "
+icon="$red"
 
 case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
-	up) icon="$(sed "s/down/ $red/; s/up/ $green/" /sys/class/net/e*/operstate 2>/dev/null)" ;;
+	up) icon="$green" ;;
 esac
 
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-	up) icon="$(awk '/^\s*w/ { print " '$green' ", int($3 * 100 / 70) "%" }' /proc/net/wireless)" ;;
+	up) icon="$(awk '/^\s*w/ { print "'$green' ", int($3 * 100 / 70) "%" }' /proc/net/wireless)" ;;
 esac
 
 echo "$icon"

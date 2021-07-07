@@ -20,7 +20,7 @@ esac
 
 # a case statement to support more than 2 kb layout would be nice
 if [ "$seven" = "ampersand" ]; then
-  echo "$pink us"
+  echo $orange\us
 else
-  echo "$pink fr"
+  echo $orange\fr
 fi

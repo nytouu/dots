@@ -2,8 +2,8 @@
 
 . "$HOME"/scripts/bar-colors
 
-echo "$blue"
+echo "$red襤  "
 
 case $BUTTON in
-	3) blueberry ;;
+    1) powermenu ;;
 esac
