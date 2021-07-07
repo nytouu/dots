@@ -1,22 +1,24 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.config/zsh/histfile
+# HISTFILE=~/.config/zsh/histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 export KEYTIMEOUT=1
-alias ls='ls --color'
+# export SVDIR=~/service
+alias ls='exa'
 alias tt='gio trash'
 alias lst='gio trash --list'
 alias rstt='gio trash --restore'
 alias emptty='gio trash --empty'
-alias ytmdl="ytmdl --skip-meta --disable-metaadd"
+alias yt="ytmdl --skip-meta --disable-metaadd"
 alias nv="nvim"
-alias lf="lf-ueberzug"
 alias poweroff="doas poweroff"
 alias reboot="doas reboot"
 alias lg="lazygit"
 alias cdnv="cd $HOME/.config/nvim"
-alias rmgit="rm -rI ./.git/"
+alias sc="sc-im"
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 PROMPT="%F{135}%n%f %F{13}%~%f %F{197}>> %f"
 
@@ -45,8 +47,8 @@ zstyle :compinstall filename '/home/nytou/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
+# eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7a3ce6,bg=dark"
