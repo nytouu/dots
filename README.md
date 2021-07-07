@@ -7,7 +7,7 @@ here's a screenshot :\
 
 # software i use
 
-os : [arch linux](https://archlinux.org/)
+os : [artix linux](https://artixlinux.org/)
 
 window manager : [hydra](https://github.com/nytouu/hydra)\
 statusbar : [hydrablocks](https://github.com/nytouu/hydrablocks)
@@ -16,8 +16,8 @@ terminal : [st](https://github.com/nytouu/st)\
 app launcher : [dmenu](https://github.com/nytouu/dmenu)\
 browser : firefox\
 image viewer : [sxiv](https://github.com/muennich/sxiv)\
-video player : [mpv](https://github.com/mpv-player/mpv)\
-text editor : [nvim](https://github.com/nytouu/dots/tree/master/config/nvim)\
+video player : mpv\
+text editor : [nvim](https://github.com/nytouu/nvim)\
 file manager : pcmanfm\
 term file manager : ranger\
 music player : ncmpcpp\
@@ -27,6 +27,6 @@ agenda : calcurse
 
 maybe i'll write some install script one day but for now clone this repo with :
 ```sh
-git clone https://github.com/nytouu/hydra.git
+git clone https://github.com/nytouu/dots.git
 ```
 and manually copy whatever you want/need into your .config folder
