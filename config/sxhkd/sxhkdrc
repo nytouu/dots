@@ -1,0 +1,53 @@
+super + n
+    $FILEBROWSER
+
+super + shift + n
+    $TERMINAL -e ranger
+
+super + b
+    $BROWSER
+
+super + t
+    $TERMINAL -e htop
+
+super + c
+    $TERMINAL -e calcurse
+
+super + x
+    xkill
+
+super + m
+    $TERMINAL -e ncmpcpp
+
+ctrl + alt + {j,k}
+    mpc volume {-2,+2}
+
+ctrl + alt + {h,l}
+    mpc {prev,next}
+
+ctrl + alt + space
+    mpc toggle
+
+super + shift + c
+    picom
+
+super + shift + x
+    killall picom
+
+super + p
+    maim $HOME/pics/screenshots/$(date +%d-%m-%G-%T).png && screenshotnotify
+
+super + shift + p
+    sleep 0.3 && maim -s $HOME/pics/screenshots/$(date +%d-%m-%G-%T).png && screenshotnotify
+
+super + shift + r
+    dmenurecord
+
+super + shift + h
+    colorpicknotify
+
+alt + shift + {f,e}
+    setxkbmap {fr,us} && pkill -RTMIN+8 hydrablocks
+
+super + Escape
+    skippy-xd
