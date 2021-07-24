@@ -1,8 +1,10 @@
-*.font: FiraMono Nerd Font
+*.font: JetBrains Mono
 Xft.dpi: 96
 XTerm*renderFont: true
-XTerm*faceName: xft:Fira Mono, xft:FiraMono Nerd Font
+XTerm*faceName: xft: JetBrainsMono Nerd Font
 XTerm*faceSize: 12
+/* Xcursor.theme: BreezeX-Black */
+/* Xcursor.size: 28 */
 
 *.foreground: #c0caf5
 *.background: #24283b
