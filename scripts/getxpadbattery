@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cat /sys/class/bluetooth/hci0:*/*/power_supply/xpadneo_battery_0/capacity_level
