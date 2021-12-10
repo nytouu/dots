@@ -21,4 +21,4 @@ case $state in
  "Charging" ) charge="$yellow ﮣ" ;;
 esac
 
-echo "$icon $charge $percent%"
+echo "$bg $icon $charge $percent%^d^"

@@ -2,7 +2,7 @@
 
 . "$HOME"/scripts/bar-colors
 
-echo "$red襤  "
+echo "$red襤^d^  "
 
 case $BUTTON in
     1) powermenu ;;

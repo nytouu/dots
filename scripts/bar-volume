@@ -9,7 +9,7 @@ case $BUTTON in
 	5) pamixer --allow-boost -d 1 ;;
 esac
 
-[ $(pamixer --get-mute) = true ] && echo " $pink婢" && exit
+[ $(pamixer --get-mute) = true ] && echo " $pink婢^d^" && exit
 
 vol="$(pamixer --get-volume)"
 
@@ -21,4 +21,4 @@ else
 	icon="奔"
 fi
 
-echo "$pink$icon $vol%"
+echo "$bg$pink $icon $vol% ^d^"

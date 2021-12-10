@@ -2,11 +2,12 @@
 
 # colors for status2d
 
-red="^c#f7768e^"
-blue="^c#7aa2f7^"
-lightblue="^c#7dcfff^"
-pink="^c#bb9af2^"
-orange="^c#e0af68^"
-green="^c#9ece6a^"
-yellow="^c#e0d168^"
-gray="^c#c0caf5^"
+red="^b#f7768e^"
+blue="^b#7aa2f7^"
+lightblue="^b#7dcfff^"
+pink="^b#bb9af2^"
+orange="^b#e0af68^"
+green="^b#9ece6a^"
+yellow="^b#e0d168^"
+gray="^b#c0caf5^"
+bg="^c#1a1b26^"

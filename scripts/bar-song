@@ -15,7 +15,7 @@ text="$(tail -n1 < /tmp/mpcscroll | sed 's/^/ /')"
 
 case $text in
 	" ") exit 0 ;;
-	*) echo "$red$icon $text" ;;
+	*) echo "$bg$red $icon $text ^d^" ;;
 esac
 
 case $BUTTON in

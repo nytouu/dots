@@ -2,7 +2,7 @@
 
 . "$HOME"/scripts/bar-colors
 
-echo "$blue"
+echo "$bg$blue  ^d^"
 
 case $BUTTON in
 	3) blueberry ;;
