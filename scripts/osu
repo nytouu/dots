@@ -4,6 +4,8 @@ export WINEPREFIX=$HOME/osu/
 export WINEARCH=win32
 export STAGING_AUDIO_PERIOD=6600
 export STAGING_AUDIO_DURATION=7000
+# export STAGING_AUDIO_PERIOD=50000
+# export STAGING_AUDIO_DURATION=70000
 export PATH=/opt/wine-osu/bin:$PATH
 export vblank_mode=0
 

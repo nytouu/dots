@@ -1,5 +1,4 @@
 #!/bin/sh
-# DOESNT WORK TODO finish this script
 
 monitorlist="$(xrandr | grep " connected" | awk '{ print $1 }')"
 

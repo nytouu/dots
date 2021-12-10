@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DMENUOPTS="-x 12 -y 8 -z 1896 -i"
+DMENUOPTS="-x 6 -y 6 -z 1920 -i"
 
 choice=$(printf "poweroff\\nreboot\\nexit" | dmenu $DMENUOPTS -p "powermenu :")
 case "$choice" in
