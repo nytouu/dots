@@ -40,6 +40,9 @@ super + p
 super + shift + p
     sleep 0.3 && maim -s $HOME/pics/screenshots/$(date +%d-%m-%G-%T).png && screenshotnotify
 
+super + ctrl + p
+    cd $HOME/pics/screenshots && sxiv $(/bin/ls -t | head -n1)
+
 super + shift + r
     dmenurecord
 
@@ -48,6 +51,3 @@ super + shift + h
 
 alt + shift + {f,e}
     setxkbmap {fr,us} && pkill -RTMIN+8 hydrablocks
-
-super + Escape
-    skippy-xd

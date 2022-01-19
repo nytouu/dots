@@ -13,7 +13,7 @@
 
 VIDS=$HOME/vids
 RES="1920x1080"
-DMENUOPTS="-x 12 -y 8 -z 1896 -i"
+DMENUOPTS="-x 0 -y 0 -z 1920 -i"
 
 updateicon() {
     echo "$1" > /tmp/recordingicon

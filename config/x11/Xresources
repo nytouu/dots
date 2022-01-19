@@ -1,7 +1,7 @@
-*.font: JetBrains Mono
+*.font: SF Mono
 Xft.dpi: 96
 XTerm*renderFont: true
-XTerm*faceName: xft: JetBrainsMono Nerd Font
+XTerm*faceName: xft: SFMono Nerd Font
 XTerm*faceSize: 12
 /* Xcursor.theme: BreezeX-Black */
 /* Xcursor.size: 28 */

@@ -5,9 +5,12 @@ SAVEHIST=1000
 bindkey -e
 export KEYTIMEOUT=1
 # export SVDIR=~/service
-alias ls='exa'
+alias ls='exa --icons'
+alias lst='exa --tree --icons'
+alias lsa='exa -a --icons'
+alias lsh='exa -l --icons'
 alias tt='gio trash'
-alias lst='gio trash --list'
+alias lstt='gio trash --list'
 alias rstt='gio trash --restore'
 alias emptty='gio trash --empty'
 alias yt="ytmdl --skip-meta --disable-metaadd"
@@ -17,6 +20,7 @@ alias reboot="doas reboot"
 alias lg="lazygit"
 alias cdnv="cd $HOME/.config/nvim"
 alias sc="sc-im"
+alias lv="lvim"
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
@@ -50,7 +54,5 @@ compinit
 
 # eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7a3ce6,bg=dark"
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
