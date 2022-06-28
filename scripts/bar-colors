@@ -3,6 +3,7 @@
 # colors for status2d
 
 red="^b#f7768e^"
+redfg="^c#f7768e^"
 blue="^b#7aa2f7^"
 lightblue="^b#7dcfff^"
 pink="^b#bb9af2^"

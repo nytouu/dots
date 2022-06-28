@@ -7,4 +7,6 @@ export STAGING_AUDIO_DURATION=7000
 export PATH=/opt/wine-osu/bin:$PATH
 export vblank_mode=0
 
-wineserver -k
+if [ ! "$(pgrep 'osu!.exe')" ]; then
+    wineserver -k
+fi

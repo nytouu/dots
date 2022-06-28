@@ -2,7 +2,8 @@
 
 . "$HOME"/scripts/bar-colors
 
-echo "$bg$lightblue  $(date '+%a %d %b, %H:%M') ^d^ "
+# echo "$bg$lightblue  $(date '+%a %d %b, %H:%M') ^d^ "
+echo "$bg$lightblue  $(date '+%H:%M') ^d^ "
 
 case $BUTTON in
     3) setsid -f "$TERMINAL" -e calcurse;

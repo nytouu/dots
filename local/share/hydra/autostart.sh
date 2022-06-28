@@ -1,25 +1,38 @@
 #!/bin/sh
 
-$HOME/.screenlayout/tv\ extend.sh
+# xdotool key 'Super_L+shift+w'
 
-xset m 0 0 
 xset s off
 xset -dpms
 xset s noblank
-setxkbmap fr
 nitrogen --restore
 
-/usr/bin/pipewire &
+if [ ! $(pgrep pipewire) ]; then
+    /usr/bin/pipewire &
+    # /usr/bin/pipewire-pulse &
+    # /usr/bin/pipewire-media-session &
+fi
 
-hydrablocks &
-picom &
+if [ ! $(pgrep hydrablocks) ]; then
+    hydrablocks &
+fi
+
+if [ ! $(pgrep zscroll) ]; then
+    mpcscroll &
+fi
+
+if [ ! $(pgrep sxhkd) ]; then
+    sxhkd &
+fi
+
+xcalib -s 0 $HOME/docs/BenQ.icm
+$HOME/.screenlayout/double.sh
+
+picom --experimental-backend &
 mpd &
-mpcscroll &
 dunst &
 lxpolkit &
 # xwinwrap -g 1920x1080+0+0 -b -ov -fs -nf -ni -fdt -d -- mpv -wid WID /home/nytou/pics/gifs/bg.gif --loop --keepaspect=no &
 discord &
-sxhkd &
-otd &
 unclutter -idle 15 &
 sleep 3 && pkill -RTMIN+10 hydrablocks

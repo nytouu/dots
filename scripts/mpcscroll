@@ -5,4 +5,3 @@
                 --match-text "playing" "--before-text ''" \
                 --match-text "paused" "--before-text '' --scroll 0" \
                 --update-check true "mpc current" > /tmp/mpcscroll
-

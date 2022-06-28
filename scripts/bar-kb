@@ -11,7 +11,7 @@ toggle() {
       setxkbmap fr
     else
       setxkbmap us
-    fi 
+    fi
 }
 
 case $BUTTON in
@@ -20,7 +20,7 @@ esac
 
 # a case statement to support more than 2 kb layout would be nice
 if [ "$seven" = "ampersand" ]; then
-  echo $bg$orange us ^d^
+  echo "$bg$orange us ^d^"
 else
-  echo $bg$orange fr ^d^
+  echo "$bg$orange fr ^d^"
 fi

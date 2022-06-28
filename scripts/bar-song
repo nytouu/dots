@@ -11,16 +11,17 @@ case $state in
 	*) icon="" ;;
 esac
 
-text="$(tail -n1 < /tmp/mpcscroll | sed 's/^/ /')"
+text="$(tail -n1 /tmp/mpcscroll | sed 's/^/ /')"
 
 case $text in
 	" ") exit 0 ;;
-	*) echo "$bg$red $icon $text ^d^" ;;
+	*) echo "$red$bg $icon $text ^d^" ;;
+	# *) echo "$icon lskjdf ^d^" ;;
 esac
 
 case $BUTTON in
-	1) mpc toggle ;;  # right click, pause/unpause
-	3) setsid -f "$TERMINAL" -e ncmpcpp ;;  # right click, pause/unpause
-	4) mpc volume +1;;
-	5) mpc volume -1 ;;
+	1) mpc toggle ;;  # left click pause/unpause
+	3) setsid -f "$TERMINAL" -e ncmpcpp ;;  # right click, open ncmpcpp
+	4) mpc volume +1 ;; # scrollup, volume up
+	5) mpc volume -1 ;; # scolldown, volume down
 esac

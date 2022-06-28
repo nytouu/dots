@@ -7,5 +7,8 @@ xsetwacom --set "$device" MapToOutput 1980x1080+0+0
 xsetwacom --set "$device" RawSample 1
 xsetwacom --set "$device" Suppress 0
 # xsetwacom --set "$device" Area 5700 4156 15200 9500
-xsetwacom --set "$device" Area 4700 3494 15200 9500
-echo "area set"
+# xsetwacom --set "$device" Area 4700 3494 15200 9500
+xsetwacom --set "$device" Area 2200 2188 15200 9500
+# xsetwacom --set "$device" Area 0 950 15200 9500
+
+notify-send -a wacom "area set"
