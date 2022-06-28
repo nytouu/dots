@@ -1,13 +1,16 @@
-*.font: SF Mono
+/* *.font: SFMono Nerd Font */
 Xft.dpi: 96
 XTerm*renderFont: true
 XTerm*faceName: xft: SFMono Nerd Font
 XTerm*faceSize: 12
-/* Xcursor.theme: BreezeX-Black */
-/* Xcursor.size: 28 */
+Xcursor.theme: macOSBigSur
+Xcursor.size: 24
 
+st.font: Liga SFMono Nerd Font:style=Medium:size=12
+st.termname: st-256color
+st.alpha: 0.95
 *.foreground: #c0caf5
-*.background: #24283b
+*.background: #1a1b26
 *.color0:     #414868
 *.color8:     #414868
 *.color1:     #f7768e

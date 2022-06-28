@@ -29,7 +29,7 @@ ctrl + alt + space
     mpc toggle
 
 super + shift + c
-    picom
+    picom --experimental-backend
 
 super + shift + x
     killall picom
