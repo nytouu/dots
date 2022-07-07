@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=hydra
+Comment=dynamic window manager fork
+Exec=xinitrcsession-helper
+TryExec=xinitrcsession-helper
+Type=Application
