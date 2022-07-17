@@ -1,3 +1,4 @@
+set ratios 1:2:3
 # interpreter for shell commands
 set shell sh
 
@@ -14,10 +15,11 @@ set scrolloff 6
 
 # others
 set drawbox
-set previewer '~/.config/lf/scope'
+set previewer '~/.config/lf/preview'
+set cleaner '~/.config/lf/cleaner'
 set icons
 set autoquit on
-set hidden
+# set hidden
 
 # define a custom 'open' command
 # This command is called when current file is not a directory. You may want to

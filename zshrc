@@ -20,6 +20,7 @@ alias lg="lazygit"
 alias cdnv="cd $HOME/.config/nvim"
 alias sc="sc-im"
 alias lv="lvim"
+alias lf="lfrun"
 alias rel="xrdb merge $HOME/.config/x11/Xresources && kill -USR1 $(pidof st)"
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -45,6 +46,11 @@ function getprompt ()
 # PROMPT="%F{135}%n%f %F{13}%~%f %F{197}>> %f"
 # PROMPT="$arrow %f%b%F{cyan}%c$gitmsg %f"
 PROMPT="\$(getprompt)%f"
+
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
+--color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
+--color=marker:#dc8a78,fg+:#4c4f69,prompt:#8839ef,hl+:#d20f39"
 
 stty stop undef
 
@@ -73,6 +79,6 @@ compinit
 
 # eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7a3ce6,bg=dark"
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7a3ce6,bg=dark"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
